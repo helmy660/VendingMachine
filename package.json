@@ -1,0 +1,19 @@
+{
+  "name": "vendingmachine",
+  "version": "1.0.0",
+  "description": "Design an API for a vending machine, allowing users with a “seller” role to add, update or remove products, while users with a “buyer” role can deposit coins into the machine and make purchases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helmy660/VendingMachine.git"
+  },
+  "author": "Mohamed Helmy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helmy660/VendingMachine/issues"
+  },
+  "homepage": "https://github.com/helmy660/VendingMachine#readme"
+}
