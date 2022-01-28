@@ -4,7 +4,11 @@
   "description": "Design an API for a vending machine, allowing users with a “seller” role to add, update or remove products, while users with a “buyer” role can deposit coins into the machine and make purchases.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run serve",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch '*.ts' --exec 'ts-node' ./src/server.ts",
+    "serve": "node dist/server.js",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,40 @@
   "bugs": {
     "url": "https://github.com/helmy660/VendingMachine/issues"
   },
-  "homepage": "https://github.com/helmy660/VendingMachine#readme"
+  "homepage": "https://github.com/helmy660/VendingMachine#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-validator": "^6.10.0",
+    "helmet": "^4.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "lusca": "^1.7.0",
+    "mongoose": "^5.12.4",
+    "morgan": "^1.10.0",
+    "nocache": "^2.1.0",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.1",
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/eslint": "^7.2.10",
+    "@types/express": "^4.17.11",
+    "@types/express-flash": "^0.0.2",
+    "@types/helmet": "^4.0.0",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/lusca": "^1.7.0",
+    "@types/mongoose": "^5.10.5",
+    "@types/morgan": "^1.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1"
+  }
 }
