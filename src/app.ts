@@ -8,6 +8,8 @@ import helmet from "helmet";
 import noCache from "nocache";
 import { connectDatabase } from "./services";
 
+import userRoute from "./routes/user.route";
+
 // Create Express server
 const app = express();
 connectDatabase();
@@ -31,6 +33,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   res.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
   next();
 });
+
+app.use("/users", userRoute);
 
 app.use((err: Error, req: Request, res: Response, next: any) => {
   console.error(err);
