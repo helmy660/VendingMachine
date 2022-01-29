@@ -18,8 +18,5 @@ pids
 # Dependency directories
 node_modules/
 
-# dotenv environment variables file
-.env
-
 # Nuxt.js build / generate output
 dist

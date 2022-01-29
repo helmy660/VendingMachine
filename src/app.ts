@@ -6,9 +6,11 @@ import flash from "express-flash";
 import morgan from "morgan";
 import helmet from "helmet";
 import noCache from "nocache";
+import { connectDatabase } from "./services";
 
 // Create Express server
 const app = express();
+connectDatabase();
 
 // Express configuration
 app.set("port", 3003);
