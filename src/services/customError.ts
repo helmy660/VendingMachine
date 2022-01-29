@@ -62,4 +62,8 @@ export const ErrorTypes = {
     code: 4011,
     message: "Error: Those items are out of stock.",
   },
+  VALIDATION_ERROR: {
+    code: 4012,
+    message: "Validation Error",
+  },
 };
