@@ -15,3 +15,11 @@ export interface IUserUpdateRequest extends Request {
     password: string;
   };
 }
+
+export interface IProductRequest extends Request {
+  body: {
+    productName: string;
+    amountAvailable: number;
+    cost: number;
+  };
+}
