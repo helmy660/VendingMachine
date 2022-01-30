@@ -7,6 +7,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import noCache from "nocache";
 import { connectDatabase } from "./services";
+import { Secrets } from "./util";
 
 import userRoute from "./routes/user.route";
 import productRoute from "./routes/product.route";
@@ -16,7 +17,7 @@ const app = express();
 connectDatabase();
 
 // Express configuration
-app.set("port", 3003);
+app.set("port", Secrets.PORT || 3000);
 app.set("etag", false);
 app.use(morgan("combined"));
 app.use(helmet());
