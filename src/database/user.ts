@@ -18,7 +18,7 @@ export class User {
     }
   }
 
-  async addDeposit(id: string, deposit: number) {
+  async updateDeposit(id: string, deposit: number) {
     try {
       return await UserModel.updateOne({ _id: id }, { $inc: { deposit } });
     } catch (error) {
