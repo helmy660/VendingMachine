@@ -91,7 +91,7 @@ router.post(
       .trim(),
   ],
   validator,
-  userController.addDeposit,
+  userController.updateDeposit,
 );
 
 router.put(
