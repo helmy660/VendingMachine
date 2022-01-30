@@ -9,6 +9,7 @@ import noCache from "nocache";
 import { connectDatabase } from "./services";
 
 import userRoute from "./routes/user.route";
+import productRoute from "./routes/product.route";
 
 // Create Express server
 const app = express();
@@ -35,6 +36,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use("/users", userRoute);
+app.use("/products", productRoute);
 
 app.use((err: Error, req: Request, res: Response, next: any) => {
   console.error(err);
